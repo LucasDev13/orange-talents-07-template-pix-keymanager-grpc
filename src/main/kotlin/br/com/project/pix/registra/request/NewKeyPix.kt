@@ -1,11 +1,8 @@
-package br.com.project.pix.registra
+package br.com.project.pix.registra.request
 
 import br.com.project.AccountType
 import br.com.project.KeyType
-import br.com.project.TipoDeChave
-import br.com.project.TipoDeConta
 import io.micronaut.core.annotation.Introspected
-import java.util.*
 import javax.validation.constraints.NotBlank
 import javax.validation.constraints.NotNull
 import javax.validation.constraints.Size
@@ -27,13 +24,13 @@ data class NewKeyPix(
     @field:NotNull
     val accountType: AccountType?
 ) {
-    fun toModel(account: AssociatedAccount): KeyPix{
-        return KeyPix(
-            clientId = UUID.fromString(this.clientId),
-            type = KeyType.valueOf(this.type!!.name),
-            key = if(this.type == KeyType.RANDOM) UUID.randomUUID().toString() else this.key!!,
-            accountType = AccountType.valueOf(this.accountType!!.name),
-            account = account
-        )
-    }
+//    fun toModel(account: AssociatedAccount): KeyPix{
+//        return KeyPix(
+//            clientId = UUID.fromString(this.clientId),
+//            type = KeyType.valueOf(this.type!!.name),
+//            key = if(this.type == KeyType.RANDOM) UUID.randomUUID().toString() else this.key!!,
+//            accountType = AccountType.valueOf(this.accountType!!.name),
+//            account = account
+//        )
+//    }
 }

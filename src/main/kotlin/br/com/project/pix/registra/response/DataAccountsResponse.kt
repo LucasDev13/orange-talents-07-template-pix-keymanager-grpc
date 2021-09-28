@@ -8,15 +8,15 @@ data class DataAccountsResponse(
     val holder: HolderResponse
 ) {
 
-    fun toModel(): AssociatedAccount{
-        return AssociatedAccount(
-            institution = this.institution.name,
-            holderName = this.holder.name,
-            cpfHolder = this.holder.cpf,
-            agency = this.agency,
-            accountNumber = this.number
-        )
-    }
+//    fun toModel(): AssociatedAccount{
+//        return AssociatedAccount(
+//            institution = this.institution.name,
+//            holderName = this.holder.name,
+//            cpfHolder = this.holder.cpf,
+//            agency = this.agency,
+//            accountNumber = this.number
+//        )
+//    }
 }
 
 data class HolderResponse(val name: String, val cpf: String)

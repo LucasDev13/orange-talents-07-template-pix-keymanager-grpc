@@ -5,7 +5,6 @@ import br.com.project.KeyType
 import java.time.LocalDateTime
 import java.util.*
 import javax.persistence.*
-import javax.validation.Valid
 import javax.validation.constraints.NotBlank
 import javax.validation.constraints.NotNull
 
@@ -31,9 +30,9 @@ class KeyPix(
     @Column(nullable = false)
     val accountType: AccountType,
 
-    @field:Valid
-    @Embedded
-    val account: AssociatedAccount
+//    @field:Valid
+//    @Embedded
+//    val account: AssociatedAccount
 ) {
 
     @Id
@@ -43,9 +42,9 @@ class KeyPix(
     @Column(nullable = false)
     val createdIn: LocalDateTime = LocalDateTime.now()
 
-    override fun toString(): String {
-        return "KeyPix(clientId=$clientId, type=$type, key='$key', accountType=$accountType, account=$account, id=$id, createdIn=$createdIn)"
-    }
+//    override fun toString(): String {
+//        return "KeyPix(clientId=$clientId, type=$type, key='$key', accountType=$accountType, account=$account, id=$id, createdIn=$createdIn)"
+//    }
 
 
 }

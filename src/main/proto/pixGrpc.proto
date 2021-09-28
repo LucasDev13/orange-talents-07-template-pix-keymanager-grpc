@@ -8,31 +8,30 @@ package br.com.project;
 
 service PixGrpcService {
     //no arquivo .proto eu defino meus endpoints
-
     //método service
     rpc registerPixKey(PixGrpcRequest) returns (PixGrpcResponse) {}
 }
 
 enum KeyType {
     UNKNOWN_KEY_TYPE = 0;//default-valor não selecionado
-    CPF =                1;
-    CELLPHONE =          2;
-    EMAIL =              3;
-    RANDOM =             4;
+    CPF = 1;
+    CELLPHONE = 2;
+    EMAIL = 3;
+    RANDOM = 4;
 }
 
 enum AccountType{
     UNKNOWN_ACCOUNT_TYPE = 0;//default-valor não selecionado
-    CURRENT_ACCOUNT      = 1;
-    SAVINGS_ACCOUNT      = 2;
+    CURRENT_ACCOUNT = 1;
+    SAVINGS_ACCOUNT = 2;
 }
 /**
     Registra a chave
  */
 message PixGrpcRequest {
-    string clientId         = 1;
-    KeyType keyType         = 2;
-    string key              = 3;
+    string clientId = 1;
+    KeyType keyType = 2;
+    string key = 3;
     AccountType accountType = 4;
 }
 

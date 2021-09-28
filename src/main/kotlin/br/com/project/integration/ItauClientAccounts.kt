@@ -6,7 +6,7 @@ import io.micronaut.http.annotation.PathVariable
 import io.micronaut.http.annotation.QueryValue
 import java.net.http.HttpResponse
 
-@Client("\${itau.contas.url}")
+//@Client("\${itau.contas.url}")
 interface ItauClientAccounts {
 
     @Get("/api/v1/clientes/{clientId}/contas{?type}")
